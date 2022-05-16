@@ -1,0 +1,68 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Mysql.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mysql"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Visibility="Visible">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Grid.RowSpan="2">
+            <Viewbox>
+            <SymbolIcon Symbol="Target"/>
+                
+            </Viewbox>
+        </StackPanel>
+
+
+            <ListView x:ConnectionId='2'
+                HorizontalAlignment="Left"
+                Grid.Row="0" Grid.Column="1" Margin="0,50,50,0"
+                                                 
+                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListView.ItemTemplate>
+                    
+                    <DataTemplate                            >
+                           
+                           
+                        <StackPanel x:ConnectionId='5'
+                                             
+                                                                  
+                            MinWidth="200" Margin="0,10">
+                            <StackPanel.ContextFlyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Abrir"/>
+                                    <MenuFlyoutItem Text="Eliminar"/>
+                                    <MenuFlyoutItem Text="Editar"/>
+                                </MenuFlyout>
+                            </StackPanel.ContextFlyout>
+                           
+                            <TextBlock x:ConnectionId='6'                       />
+                            <TextBlock x:ConnectionId='7'                     />
+                        </StackPanel>
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+
+            <Button x:ConnectionId='3' x:Name="BtnNuevaConexion"                             Content="Crear Conexion"/>
+        </StackPanel>
+
+    </Grid>
+
+</Page>
+
